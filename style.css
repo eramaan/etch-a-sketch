@@ -1,0 +1,10 @@
+#grid-container {
+    display: flex;
+    align-content: space-around;
+}
+
+.square {
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+}
