@@ -1,5 +1,6 @@
 // DOM access
 let btnCreator = document.querySelector("#creator")
+let btnCleaner = document.querySelector("#cleaner")
 let gridContainer = document.querySelector("#grid-container")
 
 
@@ -23,11 +24,17 @@ btnCreator.addEventListener('click', () => {
     
     // add hovering event
     let squares = document.querySelectorAll('.square');
-        console.log(squares.length)
         for (let k = 0; k < squares.length; k++) {
             squares[k].addEventListener("mouseout", () => {
                 squares[k].classList.add('checked'); 
             });
         }
+
+    // clean grids
+    btnCleaner.addEventListener('click', () => {
+        for (let k = 0; k < squares.length; k++) {
+                squares[k].classList.remove('checked');
+        }
+    });
 });
 
