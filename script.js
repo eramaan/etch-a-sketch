@@ -3,14 +3,20 @@ let btnCreator = document.querySelector("#creator")
 let gridContainer = document.querySelector("#grid-container")
 
 // Create a new div element
-let newDiv = document.createElement('div');
-newDiv.innerHTML = 'This is a new div!';
-newDiv.className = 'square'; 
+// let newDiv = document.createElement('div');
+// newDiv.innerHTML = 'This is a new div!';
+// newDiv.className = 'square'; 
 
 // create the div grid on click
 btnCreator.addEventListener('click', () => {
-    alert("Hello World");
-    gridContainer.appendChild(newDiv);
+    alert("Welcome grid");
+    for (let i = 0; i < 4; i++) {
+        let newDiv = document.createElement('div');
+        newDiv.innerHTML = 'This is a new div!';
+        newDiv.className = 'square';
+        gridContainer.appendChild(newDiv);
+        console.log(i)
+    }
   });
 
 
