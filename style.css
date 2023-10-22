@@ -8,3 +8,15 @@
     width: 25px;
     height: 25px;
 }
+
+.square:hover {
+    background-color: black;
+}
+
+.checked {
+    background-color: gray;
+}
+
+button {
+    margin-bottom: 15px;
+}

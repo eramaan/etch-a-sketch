@@ -5,24 +5,29 @@ let gridContainer = document.querySelector("#grid-container")
 
 // create the div grid on click
 btnCreator.addEventListener('click', () => {
-    alert("Welcome grid");
-    // create the row
+    
+    // create the column
     for (let i = 0; i < 16; i++) {
-        let newDivRow = document.createElement('div');
-        newDivRow.className = 'row';
-        gridContainer.appendChild(newDivRow);
+        let newDivColumn = document.createElement('div');
+        newDivColumn.className = 'column';
+        gridContainer.appendChild(newDivColumn);
 
         // create the divs
-        let gridRow = document.querySelectorAll('.row')
+        let gridColumns = document.querySelectorAll('.column')
         for (let j = 0; j < 16; j++) {
             let newDiv = document.createElement('div');
-            newDiv.className = 'square column';
-            gridRow[i].appendChild(newDiv);
+            newDiv.className = 'square row';
+            gridColumns[i].appendChild(newDiv);
         }
     }
-  });
+    
+    // add hovering event
+    let squares = document.querySelectorAll('.square');
+        console.log(squares.length)
+        for (let k = 0; k < squares.length; k++) {
+            squares[k].addEventListener("mouseout", () => {
+                squares[k].classList.add('checked'); 
+            });
+        }
+});
 
-
-// Set some attributes for the div (e.g., class, id, etc.)
-// newDiv.className = 'newDivClass'; // You can set a class name if needed
-// newDiv.id = 'newDivId'; // You can set an id if needed
