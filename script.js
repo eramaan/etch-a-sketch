@@ -42,7 +42,10 @@ btnCreator.addEventListener('click', () => {
             gridColumns[i].appendChild(newDiv);
         }
     }
-    
+
+    //disable the #creator button
+    btnCreator.disabled = true;
+
     // add hovering event
     let squares = document.querySelectorAll('.square');
         for (let k = 0; k < squares.length; k++) {
