@@ -12,7 +12,8 @@
 }
 
 .checked {
-    background-color: gray;
+    background-color: black;
+    opacity: 0.1;
 }
 
 button {

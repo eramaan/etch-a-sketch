@@ -38,11 +38,25 @@ btnCreator.addEventListener('click', () => {
     //disable the #creator button
     btnCreator.disabled = true;
 
-    // add hovering event
+    // // add hovering event
+    // let squares = document.querySelectorAll('.square');
+    //     for (let k = 0; k < squares.length; k++) {
+    //         squares[k].addEventListener("mouseout", () => {
+    //             squares[k].classList.add('checked');
+    //         });
+    //     }
+
+    // rainbow hovering event
+    let randomHexColorCode = () => {
+        let n = (Math.random() * 0xfffff * 1000000).toString(16);
+        return '#' + n.slice(0, 6);
+      };
+
     let squares = document.querySelectorAll('.square');
         for (let k = 0; k < squares.length; k++) {
             squares[k].addEventListener("mouseout", () => {
-                squares[k].classList.add('checked'); 
+                let randomColor = randomHexColorCode();
+                squares[k].style.backgroundColor = randomColor;
             });
         }
 
@@ -50,6 +64,7 @@ btnCreator.addEventListener('click', () => {
     btnCleaner.addEventListener('click', () => {
         for (let k = 0; k < squares.length; k++) {
                 squares[k].classList.remove('checked');
+                squares[k].style.backgroundColor = "initial";    
         }
     });
 });
