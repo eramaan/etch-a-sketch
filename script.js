@@ -42,15 +42,15 @@ btnCreator.addEventListener('click', () => {
     //disable the #creator button
     btnCreator.disabled = true;
 
-    // add hovering event
-    let squares = document.querySelectorAll('.square');
-        for (let k = 0; k < squares.length; k++) {
-            squares[k].addEventListener("mouseout", () => {
-                squares[k].classList.add('checked');
-                squares[k].style.opacity = 0.1;
+    // // add hovering event
+    // let squares = document.querySelectorAll('.square');
+    //     for (let k = 0; k < squares.length; k++) {
+    //         squares[k].addEventListener("mouseout", () => {
+    //             squares[k].classList.add('checked');
+    //             squares[k].style.opacity = 0.1;
 
-            });
-        }
+    //         });
+    //     }
 });
 
 
