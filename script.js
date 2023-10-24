@@ -4,21 +4,13 @@ let btnCleaner = document.querySelector("#cleaner")
 let gridContainer = document.querySelector("#grid-container")
 
 // grid dimension & tiles number
-let gridDimension = 960
+let gridDimension = 800
 let numTiles = 0
 
 // create the div grid on click
 btnCreator.addEventListener('click', () => {
     
     //create prompt asking for tiles number
-    while (numTiles <= 100) {
-        numTiles = parseInt(prompt("How many tiles you want to play with?"));
-    
-        if (numTiles > 100) {
-            alert("How greedy you are. Told ya, less than 100 please");
-        }
-    }
-
     do {
         numTiles = parseInt(prompt("How many tiles you want to play with? (max 100)"));
         if (numTiles > 100) {
