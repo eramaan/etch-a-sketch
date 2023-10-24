@@ -68,6 +68,8 @@ btnCreator.addEventListener('click', () => {
             let computedStyle = window.getComputedStyle(squares[k]);
             let opacityCurrent = computedStyle.getPropertyValue('opacity');
             squares[k].style.opacity = parseFloat(opacityCurrent) + 0.1;
+            squares[k].style.backgroundColor = "black";
+
         });
     }
 
@@ -75,7 +77,11 @@ btnCreator.addEventListener('click', () => {
     btnCleaner.addEventListener('click', () => {
         for (let k = 0; k < squares.length; k++) {
                 squares[k].classList.remove('checked');
-                squares[k].style.backgroundColor = "initial";    
+                squares[k].style.backgroundColor = "initial";
+                squares[k].style.opacity = "0.1";
+                squares[k].style.height = gridDimension / numTiles + 'px';
+                squares[k].style.width = gridDimension / numTiles + 'px';
+    
         }
     });
 });
