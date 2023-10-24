@@ -4,12 +4,14 @@ let btnCleaner = document.querySelector("#cleaner")
 let gridContainer = document.querySelector("#grid-container")
 
 // var od the tile number
-let numTiles = 24
 let gridDimension = 960
 
 // create the div grid on click
 btnCreator.addEventListener('click', () => {
     
+    //create prompt asking for tiles number
+    let numTiles = prompt("How many tiles you want to play with?");
+
     // create the column
     for (let i = 0; i < numTiles; i++) {
         let newDivColumn = document.createElement('div');
